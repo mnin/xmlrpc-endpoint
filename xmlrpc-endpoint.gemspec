@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{xmlrpc-endpoint}
-  s.version = "0.2.1"
+  s.version = "0.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Will Koffel"]
+  s.authors = ["Will Koffel", 'Martin Wilhelmi']
   s.date = %q{2010-01-01}
   s.description = %q{Expose Rails controller actions as XMLRPC method calls.}
-  s.email = %q{wkoffel@alum.mit.edu}
+  s.email = %q{wkoffel@alum.mit.edu, github@good-day.org}
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
      "doc/index.html",
      "doc/rdoc-style.css",
      "init.rb",
-     "lib/action_controller/acts/xmlrpc_endpoint.rb",
+     "lib/action_controller/instrumentation/xmlrpc_endpoint.rb",
      "lib/xmlrpc-endpoint.rb",
      "test/helper.rb",
      "test/test_xmlrpc-endpoint.rb",
