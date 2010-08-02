@@ -1,5 +1,5 @@
 module ActionController
-  module Acts
+  module Instrumentation
     module XmlrpcEndpoint
       def self.included(controller)
         controller.extend(ClassMethods)
@@ -13,7 +13,7 @@ module ActionController
           before_filter(:add_method_handlers, :only => [:xe_index])
           class_eval <<-EOV
             require 'xmlrpc/server'
-            include ActionController::Acts::XmlrpcEndpoint::InstanceMethods
+            include ActionController::Instrumentation::XmlrpcEndpoint::InstanceMethods
 
             def xe_method_prefix
               '#{configuration[:method_prefix]}'
